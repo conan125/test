@@ -1,0 +1,4 @@
+<span [class.selected]='docId === currentDocument' (click)='loadDoc(docId)' *ngFor='let docId of documents | async'>
+  {{ docId }}
+</span>
+<video width="400" height="320" [src]="srcobj"></video>

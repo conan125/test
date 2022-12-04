@@ -1,0 +1,24 @@
+<button type="button" style="z-index: 3431;" (click)="imageClick()" class="btn btn-primary btn-lg" data-toggle="modal"
+  data-target="#myModal">
+  open modal<div class="box">
+    <span aria-label="我是tooltip">我是主体内容啊</span>
+    <div class="wrap">
+      <a href="#" class="btn" data-tip="点击作答">一个按钮</a>
+    </div>
+  </div>
+</button>
+<app-modal [isFooter]="true" style="z-index: -1;" (hide_emitter)="test($event)">
+  //需要用来展示的modal内容
+</app-modal>
+
+<img src="assets/img/img/a.jpg" />
+<div id="e1" style="background-color:black;width:100%;height:500px;">
+  <ul style="color:white;">
+    <li>boundingClientRect:<span id="el-boundingClientRect"></span></li>
+    <li>intersectionRatio:<span id="el-intersectionRatio"></span></li>
+    <li>intersectionRect:<span id="el-intersectionRect"></span></li>
+    <li>isIntersecting:<span id="el-isIntersecting"></span></li>
+    <li>rootBounds:<span id="el-rootBounds"></span></li>
+    <li>time:<span id="el-time"></span></li>
+  </ul>
+</div>

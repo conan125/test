@@ -1,0 +1,15 @@
+{
+  "name": "readdirfile0722",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "me": "^0.3.0",
+    "readdirfile0722": "^1.0.0"
+  }
+}

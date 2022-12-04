@@ -1,0 +1,11 @@
+<!-- <button class="call-btn">call-btn</button>
+<button class="call-container">call-container</button>
+<button class="hangup-btn">hangup-btn</button> -->
+<ol>
+  <li *ngFor="let message of messages">
+    {{message.text}}{{message|json}}
+  </li>
+</ol>
+
+<input [(ngModel)]="message" />
+<d-button (click)="sendMessage()">Send</d-button>,

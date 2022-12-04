@@ -1,0 +1,32 @@
+#! /usr/bin/env node
+
+const program = require('commander')
+const clearArgs = (cmd) => {
+    const args = {}
+    cmd.options.forEach(element => {
+        const key = element.long.slice(2)
+        if (cmd[key]) {
+            args[key] = cmd[key]
+        }
+    });
+    return args
+}
+
+// 重名，需要强制创建的模式
+program
+    .command('create <app-name>')
+    .description('create a new project')
+    .option('-f, --force', 'overwrite target directory if it exists')
+    .action((name, cmd) => {
+        const x = clearArgs(cmd)
+        console.log(name, x)
+    })
+
+// xuan -v     
+program
+    .version(`lgs-cli @${require('../package.json').version}`)
+    .usage(`<command> [option]`)
+
+
+// 解析用户执行命令传入的参数
+program.parse(process.argv)

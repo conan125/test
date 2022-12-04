@@ -1,0 +1,78 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.22.10/libexec/bin/yarn.js add react-router-dom
+
+PATH: 
+  /usr/local/opt/opencv@2/bin:/Library/Java/JavaVirtualMachines/jdk1.8.0.251.jdk/Contents/Home/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/usr/local/share/dotnet:/Library/Apple/usr/bin:/Users/liguangyuan/.cargo/bin:/usr/local/apache-tomcat/bin:/Users/liguangyuan/.emacs.d/bin:/usr/local/anaconda3/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/usr/local/share/dotnet:/Library/Apple/usr/bin:/Users/liguangyuan/.cargo/bin:/usr/local/apache-tomcat/bin:/Users/liguangyuan/.emacs.d/bin:/usr/local/apache-tomcat/bin:.:/usr/local/mysql/bin
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  16.15.1
+
+Platform: 
+  darwin x64
+
+Trace: 
+  TypeError: true is not iterable!
+      at module.exports.module.exports.__webpack_require__.getIterator (/usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:105453:42)
+      at PackageLinker.<anonymous> (/usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:48609:192)
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:310:30)
+      at /usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:328:14
+      at new Promise (<anonymous>)
+      at new F (/usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:5301:28)
+      at PackageLinker.<anonymous> (/usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:307:12)
+      at PackageLinker.linkBinDependencies (/usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:48656:20)
+      at /usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:49222:28
+
+npm manifest: 
+  {
+    "name": "my-app",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+      "@mikecousins/react-pdf": "^6.1.1",
+      "@testing-library/jest-dom": "^5.16.4",
+      "@testing-library/react": "^13.1.1",
+      "@testing-library/user-event": "^13.5.0",
+      "pdfjs-dist": "^2.16.105",
+      "react": "^18.0.0",
+      "react-dom": "^18.0.0",
+      "react-scripts": "5.0.1",
+      "web-vitals": "^2.1.4"
+    },
+    "scripts": {
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "test": "react-scripts test",
+      "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+      "extends": [
+        "react-app",
+        "react-app/jest"
+      ]
+    },
+    "browserslist": {
+      "production": [
+        ">0.2%",
+        "not dead",
+        "not op_mini all"
+      ],
+      "development": [
+        "last 1 chrome version",
+        "last 1 firefox version",
+        "last 1 safari version"
+      ]
+    },
+    "devDependencies": {
+      "react-router-dom": "^6.4.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
