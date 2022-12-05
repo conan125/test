@@ -1,30 +1,13 @@
-import { MessageService } from './../../services/message.service';
 import { HttpClient } from '@angular/common/http';
 import {
   Component,
-  ElementRef,
   OnInit,
-  TemplateRef,
-  ViewChild,
   ViewContainerRef,
+  ElementRef,
+  ViewChild,
+  TemplateRef,
 } from '@angular/core';
 import { Router } from '@angular/router';
-import {
-  fromEvent,
-  interval,
-  Subject,
-  scan,
-  reduce,
-  take,
-  of,
-  from,
-  map,
-  mergeMap,
-  tap,
-  switchMap,
-  flatMap,
-} from 'rxjs';
-import { Component, OnInit } from '@angular/core';
 import {
   bufferCount,
   bufferTime,
@@ -42,13 +25,16 @@ import {
   Observable,
   observable,
   of,
+  scan,
   startWith,
+  Subject,
   switchMap,
   take,
   tap,
   timer,
   toArray,
 } from 'rxjs';
+import { MessageService } from 'src/app/services/message.service';
 
 @Component({
   selector: 'app-demo01',

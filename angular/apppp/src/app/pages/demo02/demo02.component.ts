@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { MessageService } from './../../services/message.service';
 import { Component, OnInit } from '@angular/core';
 import { from, concatMap, switchMap, map, of } from 'rxjs';
-import { reduce, zip, zipAll } from 'rxjs/operators';
+import { reduce, toArray, zip, zipAll } from 'rxjs/operators';
 
 @Component({
   selector: 'app-demo02',
@@ -44,40 +44,12 @@ export class Demo02Component implements OnInit {
         ],
       },
     ];
-    let source = from(userInfo).pipe(
-      concatMap((group: any) => {
-        return from(group['users']).pipe(
-          map((user: any) => {
-            user['parent'] = group.id;
-            return user;
-          })
-        );
-      }),
-      reduce((i, j) => i.concat(j), [])
-    );
-    from([1, 2, 3, 4])
-      .pipe(
-        switchMap((x) => of({ age: x + 4 })),
-        map((item: any) => ((item['name'] = `HELLO${item.age}`), item)),
-        reduce((i, j) => i.concat(j), [])
-      )
-      .subscribe(console.log);
-
-    source.subscribe(console.log);
-    this.messageService.a.next('assdfsdfa');
-    setTimeout(() => {
-      this.messageService.a.next(789);
-    }, 3000);
-    // this.messageService.astate.subscribe(console.log);
-    // this.messageService.a.subscribe(console.warn);
-    setTimeout(() => {
-      this.messageService.goto();
-    }, 5000);
-    this.messageService.message.onmessage = (e) => {
-      // console.log('demo2event', e);
-    };
-    this.http
-      .get('assets/work/json/a.json')
-      .subscribe((x) => console.log(222, x));
+    const map = new Map([[1, 'hi']]);
+    map.set(2, 'Bye');
+    map.set(3, 'rxjs');
+    const mapSource$ = from(map);
+    const subscribe = mapSource$
+      .pipe(toArray())
+      .subscribe((val) => console.log(val));
   }
 }
