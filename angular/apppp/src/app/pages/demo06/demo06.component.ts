@@ -1,5 +1,5 @@
 import { groupBy, startWith, windowCount } from 'rxjs/operators';
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import {
   AbstractControl,
   FormArray,
@@ -29,7 +29,7 @@ import {
 export class Demo06Component implements OnInit {
   formgroup!: FormGroup;
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private cdr: ChangeDetectorRef) {}
   getInnerArray(): FormArray {
     return this.fb.array([
       this.fb.control(false),
@@ -54,6 +54,7 @@ export class Demo06Component implements OnInit {
     this.formgroup = this.fb.group({
       zhs: this.getOuterArray(),
     });
+    this.cdr.detectChanges();
   }
   all(array: FormArray): boolean {
     return !array.value.some((item: boolean) => !item);
