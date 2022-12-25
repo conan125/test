@@ -1,0 +1,14 @@
+{
+    "version": "1.0.0",
+    "configurations": [
+        {
+            "name": "Dlong",
+            "type": "antlr-debug",
+            "request": "launch",
+            "input": "input.txt",
+            "grammar": "Breathing.g4",
+            "printParseTree": true,
+            "visualParseTree": true
+        },
+    ]
+}

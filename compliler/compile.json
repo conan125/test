@@ -1,0 +1,4 @@
+{
+  "code": "function getData() {\n  console.log(\"getData\", 'data');\n}",
+  "map": null
+}
