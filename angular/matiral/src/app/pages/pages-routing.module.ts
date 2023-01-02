@@ -8,7 +8,7 @@ import { Demo05Component } from './demo05/demo05.component';
 import { Demo06Component } from './demo06/demo06.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'demo01', pathMatch: 'full' },
+  { path: '', redirectTo: 'demo04', pathMatch: 'full' },
   { path: 'demo01', component: Demo01Component },
   { path: 'demo02', component: Demo02Component },
   { path: 'demo03', component: Demo03Component },

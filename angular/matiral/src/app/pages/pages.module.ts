@@ -8,6 +8,7 @@ import { Demo03Component } from './demo03/demo03.component';
 import { Demo04Component } from './demo04/demo04.component';
 import { Demo05Component } from './demo05/demo05.component';
 import { Demo06Component } from './demo06/demo06.component';
+import { RefreshDirective } from './refresh.directive';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { Demo06Component } from './demo06/demo06.component';
     Demo04Component,
     Demo05Component,
     Demo06Component,
+    RefreshDirective,
   ],
   imports: [CommonModule, PagesRoutingModule],
 })
