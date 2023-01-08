@@ -9,6 +9,9 @@ import { Demo04Component } from './demo04/demo04.component';
 import { Demo05Component } from './demo05/demo05.component';
 import { Demo06Component } from './demo06/demo06.component';
 import { RefreshDirective } from './refresh.directive';
+import { TestComponent } from './demo06/test/test.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Demo07Component } from './demo07/demo07.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,9 @@ import { RefreshDirective } from './refresh.directive';
     Demo05Component,
     Demo06Component,
     RefreshDirective,
+    TestComponent,
+    Demo07Component,
   ],
-  imports: [CommonModule, PagesRoutingModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, PagesRoutingModule],
 })
 export class PagesModule {}

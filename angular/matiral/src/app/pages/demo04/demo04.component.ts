@@ -18,6 +18,7 @@ import {
   styleUrls: ['./demo04.component.css'],
 })
 export class Demo04Component implements OnInit {
+  vue: any;
   constructor() {
     window.onerror = function (
       errorMessage,
@@ -44,6 +45,7 @@ export class Demo04Component implements OnInit {
   }
   public result: any;
   @ViewChild('test', { read: ElementRef, static: true }) test!: ElementRef;
+  @ViewChild('app', { read: ElementRef, static: true }) app!: ElementRef;
 
   readText(data: Blob) {
     return new Observable((observer: Observer<any>) => {
@@ -93,15 +95,27 @@ export class Demo04Component implements OnInit {
           // this.readText2(x).subscribe((b) => console.log(11, b));
         }),
         switchMap((data: any) => {
+          this.compile(data);
+
           return this.readText2(data).pipe();
         })
       )
       .subscribe((a: Uint8Array) => {
-        this.result = a;
-        this.downloadFile(
-          new File([a], new Date().getTime().toString()),
-          new Date().getTime().toString()
-        );
+        // this.vue = a;
       });
+  }
+  compile(data: string) {
+    const domparser = new DOMParser();
+    const result = domparser.parseFromString(data, 'text/html');
+    console.dir(result.body);
+    const fragment = document.createDocumentFragment();
+    while (result.firstChild) {
+      console.dir(result.firstChild);
+      this.app.nativeElement.appendChild(result.firstChild);
+    }
+    console.log(this.app);
+    const html = this.app.nativeElement as HTMLElement;
+    html.appendChild(fragment);
+    html.append('<h1>hello</h1>');
   }
 }

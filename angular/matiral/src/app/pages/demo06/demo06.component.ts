@@ -7,6 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Demo06Component implements OnInit {
   constructor() {}
-
+  expression = 0;
   ngOnInit(): void {}
 }

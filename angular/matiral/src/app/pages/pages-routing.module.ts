@@ -6,15 +6,17 @@ import { Demo03Component } from './demo03/demo03.component';
 import { Demo04Component } from './demo04/demo04.component';
 import { Demo05Component } from './demo05/demo05.component';
 import { Demo06Component } from './demo06/demo06.component';
+import { Demo07Component } from './demo07/demo07.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'demo04', pathMatch: 'full' },
+  { path: '', redirectTo: 'demo07', pathMatch: 'full' },
   { path: 'demo01', component: Demo01Component },
   { path: 'demo02', component: Demo02Component },
   { path: 'demo03', component: Demo03Component },
   { path: 'demo04', component: Demo04Component },
   { path: 'demo05', component: Demo05Component },
   { path: 'demo06', component: Demo06Component },
+  { path: 'demo07', component: Demo07Component },
 ];
 
 @NgModule({
