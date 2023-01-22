@@ -23,7 +23,7 @@
             "inlineStyleLanguage": "scss",
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": ["src/style.css"],
-            "scripts": [],
+            "scripts": ["node_modules/echarts/dist/echarts.js"],
             "webWorkerTsConfig": "tsconfig.worker.json"
           },
           "configurations": {
