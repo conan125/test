@@ -1,1 +1,1 @@
-/Users/liguangyuan/project/git/repo/rust/greeting/target/debug/greeting: /Users/liguangyuan/project/git/repo/rust/greeting/src/main.rs
+/Users/liguangyuan/project/test/rust/greeting/target/debug/greeting: /Users/liguangyuan/project/test/rust/greeting/src/main.rs
