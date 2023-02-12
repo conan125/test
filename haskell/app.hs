@@ -1,5 +1,17 @@
-main = print $ add x y
-  where
-    x = 123
-    y = 456
-    add x y = x + y
+{-# LANGUAGE OverloadedStrings #-}
+{-# LANGUAGE QuasiQuotes #-}
+{-# LANGUAGE TemplateHaskell #-}
+{-# LANGUAGE TypeFamilies #-}
+import Yesod
+
+data HelloWorld = HelloWorld
+
+mkYesod "HelloWorld" [parseRoutes|/ HomeR GET|]
+
+instance Yesod HelloWorld
+
+getHomeR :: Handler Html
+getHomeR = defaultLayout [whamlet|Hello World!|]
+
+main :: IO ()
+main = warp 4000 HelloWorld
