@@ -10,6 +10,16 @@
   (major1) == 0 && (major2) <  1 || \
   (major1) == 0 && (major2) == 1 && (minor) <= 0)
 #endif /* MIN_VERSION_workspace */
+/* package aeson-2.1.1.0 */
+#ifndef VERSION_aeson
+#define VERSION_aeson "2.1.1.0"
+#endif /* VERSION_aeson */
+#ifndef MIN_VERSION_aeson
+#define MIN_VERSION_aeson(major1,major2,minor) (\
+  (major1) <  2 || \
+  (major1) == 2 && (major2) <  1 || \
+  (major1) == 2 && (major2) == 1 && (minor) <= 1)
+#endif /* MIN_VERSION_aeson */
 /* package base-4.17.0.0 */
 #ifndef VERSION_base
 #define VERSION_base "4.17.0.0"
@@ -20,16 +30,6 @@
   (major1) == 4 && (major2) <  17 || \
   (major1) == 4 && (major2) == 17 && (minor) <= 0)
 #endif /* MIN_VERSION_base */
-/* package workspace-0.1.0.0 */
-#ifndef VERSION_workspace
-#define VERSION_workspace "0.1.0.0"
-#endif /* VERSION_workspace */
-#ifndef MIN_VERSION_workspace
-#define MIN_VERSION_workspace(major1,major2,minor) (\
-  (major1) <  0 || \
-  (major1) == 0 && (major2) <  1 || \
-  (major1) == 0 && (major2) == 1 && (minor) <= 0)
-#endif /* MIN_VERSION_workspace */
 /* package yesod-1.6.2.1 */
 #ifndef VERSION_yesod
 #define VERSION_yesod "1.6.2.1"
