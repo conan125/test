@@ -1,6 +1,6 @@
 module Main where
 
-import Lib
+import Funpaala
 
 main :: IO ()
-main = lib
+main = funpaala
