@@ -1,4 +1,4 @@
-<!--
+/*
  * ......................................&&.........................
  * ....................................&&&..........................
  * .................................&&&&............................
@@ -48,9 +48,30 @@
  * ..................................&..............................
  *
  * @Author: matu-lgs
- * @Date: 2023-01-09 22:37:41
+ * @Date: 2023-03-03 21:21:32
  * @LastEditors: matu-lgs
- * @LastEditTime: 2023-03-08 19:52:09
- -->
-hello
-<input #img id="img" type="file" multiple name="img">
+ * @LastEditTime: 2023-03-03 21:22:10
+ */
+package main
+
+import (
+	"net/http"
+
+	"github.com/gin-gonic/gin"
+)
+func main() {
+	r := gin.Default()
+
+	r.GET("/someJSON", func(c *gin.Context) {
+		data := map[string]interface{}{
+			"lang": "GO语言",
+			"tag":  "<br>",
+		}
+print(data)
+		// 输出 : {"lang":"GO\u8bed\u8a00","tag":"\u003cbr\u003e"}
+		c.AsciiJSON(http.StatusOK, data)
+	})
+
+	// 监听并在 0.0.0.0:8080 上启动服务
+	r.Run(":8080")
+}
